@@ -1,0 +1,51 @@
+/* Estilos globales */
+* {
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-family: var(--ion-font-family);
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--ion-color-light);
+  }
+  
+  /* Mejoras en la legibilidad */
+  ion-card-title, ion-card-subtitle {
+    color: var(--ion-color-dark);
+  }
+  
+  /* Animaciones suaves */
+  ion-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+  
+  /* Mejoras en los inputs */
+  ion-input {
+    --padding-start: 12px !important;
+    --padding-end: 12px !important;
+  }
+  
+  /* Clases de utilidad */
+  .text-center {
+    text-align: center;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  .mt-20 {
+    margin-top: 20px;
+  }
+  
+  .mb-20 {
+    margin-bottom: 20px;
+  }

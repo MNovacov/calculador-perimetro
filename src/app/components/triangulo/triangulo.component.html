@@ -1,0 +1,76 @@
+<ion-card class="figure-card">
+    <ion-card-header>
+      <ion-card-title>TRIÁNGULO</ion-card-title>
+      <ion-card-subtitle>Perímetro</ion-card-subtitle>
+    </ion-card-header>
+    
+    <ion-card-content>
+      <div class="figure-image">
+        <img src="assets/images/triangulo.png" alt="Triángulo">
+      </div>
+  
+      <div class="formula-section" (click)="toggleFormula()">
+        <ion-button fill="clear" class="formula-button">
+          {{ mostrarFormula ? 'OCULTAR FÓRMULA' : 'MOSTRAR FÓRMULA' }}
+          <ion-icon slot="end" [name]="mostrarFormula ? 'chevron-up' : 'chevron-down'"></ion-icon>
+        </ion-button>
+        
+        <div class="formula-content" *ngIf="mostrarFormula">
+          <p>El perímetro de un triángulo se calcula con:</p>
+          <p class="math-formula">P = a + b + c</p>
+          <p>Para triángulo equilátero:</p>
+          <p class="math-formula">P = 3 × a</p>
+        </div>
+      </div>
+  
+      <ion-item class="type-selector">
+        <ion-label>Tipo de Triángulo</ion-label>
+        <ion-select [(ngModel)]="tipoTriangulo" interface="action-sheet">
+          <ion-select-option value="escaleno">Escaleno</ion-select-option>
+          <ion-select-option value="equilatero">Equilátero</ion-select-option>
+        </ion-select>
+      </ion-item>
+  
+      <ion-item class="input-field">
+        <ion-label position="stacked">Lado A (cm)</ion-label>
+        <ion-input 
+          type="number" 
+          [(ngModel)]="lado1" 
+          placeholder="Ingrese longitud"
+        ></ion-input>
+      </ion-item>
+  
+      <ion-item class="input-field" *ngIf="tipoTriangulo === 'escaleno'">
+        <ion-label position="stacked">Lado B (cm)</ion-label>
+        <ion-input 
+          type="number" 
+          [(ngModel)]="lado2" 
+          placeholder="Ingrese longitud"
+        ></ion-input>
+      </ion-item>
+  
+      <ion-item class="input-field" *ngIf="tipoTriangulo === 'escaleno'">
+        <ion-label position="stacked">Lado C (cm)</ion-label>
+        <ion-input 
+          type="number" 
+          [(ngModel)]="lado3" 
+          placeholder="Ingrese longitud"
+        ></ion-input>
+      </ion-item>
+  
+      <ion-button 
+        expand="block" 
+        color="primary" 
+        class="calculate-button"
+        (click)="calcular()"
+        [disabled]="!formValid"
+      >
+        CALCULAR EL PERÍMETRO
+      </ion-button>
+  
+      <div class="result-section" *ngIf="resultado !== null">
+        <h3>El perímetro es:</h3>
+        <p class="result">{{ resultado | number:'1.2-2' }} cm</p>
+      </div>
+    </ion-card-content>
+  </ion-card>

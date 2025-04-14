@@ -1,0 +1,27 @@
+ion-content {
+  --background: #313030;
+}
+
+.selection-card {
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+
+  ion-segment {
+    --background: var(--ion-color-light);
+    border-radius: 8px;
+    padding: 4px;
+  }
+
+  ion-segment-button {
+    --indicator-color: var(--ion-color-primary);
+    --color-checked: white;
+    --border-radius: 8px;
+    min-height: 40px;
+  }
+}
+
+ion-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}

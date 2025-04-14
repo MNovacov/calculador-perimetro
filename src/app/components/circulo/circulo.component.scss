@@ -1,0 +1,82 @@
+.figure-card {
+    margin: 0;
+    border-radius: 12px;
+    box-shadow: none;
+    border: 1px solid var(--ion-color-light-shade);
+  }
+  
+  .figure-image {
+    text-align: center;
+    margin: 15px 0;
+    
+    img {
+      max-width: 150px;
+      height: auto;
+    }
+  }
+  
+  .formula-section {
+    margin: 20px 0;
+    border-top: 1px solid var(--ion-color-light-shade);
+    border-bottom: 1px solid var(--ion-color-light-shade);
+    padding: 10px 0;
+  
+    .formula-button {
+      --padding-start: 0;
+      --padding-end: 0;
+      margin: 0 auto;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: var(--ion-color-primary);
+    }
+  
+    .formula-content {
+      background-color: var(--ion-color-light);
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 10px;
+  
+      .math-formula {
+        font-family: monospace;
+        font-size: 1.2em;
+        text-align: center;
+        color: var(--ion-color-primary);
+        margin: 10px 0;
+      }
+    }
+  }
+  
+  .input-field {
+    --background: var(--ion-color-light);
+    --border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .calculate-button {
+    --border-radius: 8px;
+    height: 50px;
+    font-weight: bold;
+    margin: 20px 0;
+    text-transform: uppercase;
+  }
+  
+  .result-section {
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: var(--ion-color-light);
+    border-radius: 8px;
+  
+    h3 {
+      color: var(--ion-color-medium);
+      margin: 0 0 5px 0;
+      font-size: 1em;
+    }
+  
+    .result {
+      font-size: 1.8em;
+      font-weight: bold;
+      color: var(--ion-color-primary);
+      margin: 0;
+    }
+  }

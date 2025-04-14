@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">
+      Calculadora de Perímetros
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-card class="selection-card">
+    <ion-card-header>
+      <ion-card-title class="ion-text-center">Seleccione una figura</ion-card-title>
+    </ion-card-header>
+    
+    <ion-card-content>
+      <ion-segment [(ngModel)]="figuraSeleccionada" value="circulo">
+        <ion-segment-button value="circulo">
+          <ion-label>Círculo</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="triangulo">
+          <ion-label>Triángulo</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </ion-card-content>
+  </ion-card>
+
+  <div *ngIf="figuraSeleccionada === 'circulo'">
+    <app-circulo></app-circulo>
+  </div>
+
+  <div *ngIf="figuraSeleccionada === 'triangulo'">
+    <app-triangulo></app-triangulo>
+  </div>
+</ion-content>
